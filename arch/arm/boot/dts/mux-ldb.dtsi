@@ -1,0 +1,310 @@
+
+&ldb {
+    status = "okay";
+
+    lvds-channel@0 {
+        fsl,data-mapping = "spwg";
+        fsl,data-width = <18>;
+        primary;
+        status = "okay";
+        display-timings {
+            native-mode = <&SVGA1>;
+            //G121AGE-L03 P16,index 0
+            SVGA1: ldb-800x600 {
+                clock-frequency = <40000000>;
+                hactive = <800>;
+                vactive = <600>;
+                hback-porch = <100>;
+                hfront-porch = <100>;
+                vback-porch = <10>;
+                vfront-porch = <10>;
+                hsync-len = <56>;
+                vsync-len = <8>;
+            };
+            //index 1
+            XGA1: ldb-1024x768 {
+                clock-frequency = <60000000>;
+                hactive = <1024>;
+                vactive = <768>;
+                hback-porch = <200>;
+                hfront-porch = <200>;
+                vback-porch = <24>;
+                vfront-porch = <24>;
+                hsync-len = <20>;
+                vsync-len = <8>;
+            };
+            //B101EW05 P22,index 2
+            WXGA1: ldb-1280x800 {
+                clock-frequency = <65000000>;
+                hactive = <1280>;
+                vactive = <800>;
+                hback-porch = <5>;
+                hfront-porch = <64>;
+                vback-porch = <2>;
+                vfront-porch = <40>;
+                hsync-len = <1>;
+                vsync-len = <1>;
+            };
+            //LC185EXN P10, index 3
+            WXSGAP1: ldb-1360x768 {
+                clock-frequency = <65000000>;
+                hactive = <1360>;
+                vactive = <768>;
+                hback-porch = <42>;
+                hfront-porch = <36>;
+                vback-porch = <10>;
+                vfront-porch = <4>;
+                hsync-len = <48>;
+                vsync-len = <6>;
+            };
+            //index 4
+            FHD1: ldb-1920x1080 {
+                clock-frequency = <130000000>;
+                hactive = <1920>;
+                vactive = <1080>;
+                hback-porch = <140>;
+                hfront-porch = <40>;
+                vback-porch = <30>;
+                vfront-porch = <3>;
+                hsync-len = <10>;
+                vsync-len = <2>;
+            };
+            //G190SF01, index 5
+            WSXGAP1: ldb-1680x1050 {
+                clock-frequency = <130000000>;
+                hactive = <1680>;
+                vactive = <1050>;
+                hback-porch = <70>;
+                hfront-porch = <220>;
+                vback-porch = <10>;
+                vfront-porch = <4>;
+                hsync-len = <76>;
+                vsync-len = <2>;
+            };
+            //G1549HD108GF, index 6
+            HDR1: ldb-720x1280 {
+                clock-frequency = <90000000>;
+                hactive = <720>;
+                vactive = <1280>;
+                hback-porch = <16>;
+                hfront-porch = <16>;
+                vback-porch = <16>;
+                vfront-porch = <16>;
+                hsync-len = <2>;
+                vsync-len = <2>;
+            };
+            //AT070TN92, index 7
+            WVGA1: ldb-800x480 {
+                clock-frequency = <42000000>;
+                hactive = <800>;
+                vactive = <480>;
+                hback-porch = <64>;
+                hfront-porch = <280>;
+                vback-porch = <22>;
+                vfront-porch = <103>;
+                hsync-len = <8>;
+                vsync-len = <8>;
+            };
+            //M190PW01, index 8
+            WXGAP1: ldb-1440x900 {
+                clock-frequency = <90000000>;
+                hactive = <1440>;
+                vactive = <900>;
+                hback-porch = <250>;
+                hfront-porch = <250>;
+                vback-porch = <10>;
+                vfront-porch = <4>;
+                hsync-len = <76>;
+                vsync-len = <2>;
+            };
+            //1360x768 1/2 cut, index 9
+           WXSGAP1P2: ldb-1360x384 {
+                clock-frequency = <35000000>;
+                hactive = <1360>;
+                vactive = <384>;
+                hback-porch = <250>;
+                hfront-porch = <250>;
+                vback-porch = <10>;
+                vfront-porch = <404>;
+                hsync-len = <76>;
+                vsync-len = <2>;
+           };
+           //LD070WX3-LV01, index 10
+           WXGAR1: ldb-800x1280 {
+                clock-frequency = <65000000>;
+                hactive = <800>;
+                vactive = <1280>;
+                hback-porch = <32>;
+                hfront-porch = <32>;
+                vback-porch = <32>;
+                vfront-porch = <32>;
+                hsync-len = <16>;
+                vsync-len = <8>;
+           };
+	  //FULL HD 1/2 CUT, index 11
+	   HFHD1: ldb-1920x540 {
+                clock-frequency = <130000000>;
+                hactive = <1920>;
+                vactive = <540>;
+                hback-porch = <210>;
+                hfront-porch = <40>;
+                vback-porch = <672>;
+                vfront-porch = <120>;
+                hsync-len = <16>;
+                vsync-len = <16>;
+           };
+            //SXGA,index 12
+           SXGA1: ldb-1280x1024 {
+                clock-frequency = <130000000>;
+                hactive = <1280>;
+                vactive = <1024>;
+                hback-porch = <210>;
+                hfront-porch = <40>;
+                vback-porch = <132>;
+                vfront-porch = <120>;
+                hsync-len = <22>;
+                vsync-len = <22>;
+           };
+           //UXGA,index 13
+           UXGA1: ldb-1600x1200 {
+                clock-frequency = <130000000>;
+                hactive = <1600>;
+                vactive = <1200>;
+                hback-porch = <210>;
+                hfront-porch = <40>;
+                vback-porch = <132>;
+                vfront-porch = <120>;
+                hsync-len = <22>;
+                vsync-len = <22>;
+           };
+	   //UFHD,index 14,AVD-TT123QT-NW-003-B
+           UFHD1: ldb-1920x720 {
+                clock-frequency = <88000000>;
+                hactive = <1920>;
+                vactive = <720>;
+                hback-porch = <16>;
+                hfront-porch = <32>;
+                vback-porch = <4>;
+                vfront-porch = <32>;
+                hsync-len = <16>;
+                vsync-len = <2>;
+           };
+	  //UWXSGAP,index 15,G190SFF
+           UWXSGAP1: ldb-1680x342 {
+                clock-frequency = <48000000>;
+                hactive = <1680>;
+                vactive = <348>;
+                hback-porch = <16>;
+                hfront-porch = <32>;
+                vback-porch = <4>;
+                vfront-porch = <32>;
+                hsync-len = <16>;
+                vsync-len = <2>;
+           };
+	   //index 16 
+           UWFHDCUT1: ldb-3840x540 {
+                clock-frequency = <130000000>;
+                hactive = <3840>;
+                vactive = <540>;
+                hback-porch = <32>;
+                hfront-porch = <64>;
+                vback-porch = <8>;
+                vfront-porch = <64>;
+                hsync-len = <32>;
+                vsync-len = <4>;
+           };
+	   //UWXGA,index 17,N173FGE-L13
+           UWXGA1: ldb-1600x900 {
+                clock-frequency = <108000000>;
+                hactive = <1600>;
+                vactive = <900>;
+                hback-porch = <160>;
+                hfront-porch = <180>;
+                vback-porch = <4>;
+                vfront-porch = <32>;
+                hsync-len = <16>;
+                vsync-len = <2>;
+           };
+
+        };
+    };
+
+    lvds-channel@1 {
+        fsl,data-mapping = "spwg";
+        fsl,data-width = <18>;
+        status = "okay";
+
+        display-timings {
+            native-mode = <&SVGA2>;
+            //G121AGE-L03 P16, index 0
+            SVGA2: ldb-800x600 {
+                clock-frequency = <65000000>;
+                hactive = <800>;
+                vactive = <600>;
+                hback-porch = <100>;
+                hfront-porch = <100>;
+                vback-porch = <10>;
+                vfront-porch = <10>;
+                hsync-len = <56>;
+                vsync-len = <8>;
+            };
+            XGA2: ldb-1024x768 {
+                clock-frequency = <65000000>;
+                hactive = <1024>;
+                vactive = <768>;
+                hback-porch = <200>;
+                hfront-porch = <100>;
+                vback-porch = <15>;
+                vfront-porch = <15>;
+                hsync-len = <20>;
+                vsync-len = <8>;
+            };
+            WXGA2: ldb-1280x800 {
+                clock-frequency = <65000000>;
+                hactive = <1280>;
+                vactive = <800>;
+                hback-porch = <200>;
+                hfront-porch = <100>;
+                vback-porch = <15>;
+                vfront-porch = <15>;
+                hsync-len = <20>;
+                vsync-len = <8>;
+            };
+            WXSGAP2: ldb-1366x768 {
+                clock-frequency = <65000000>;
+                hactive = <1366>;
+                vactive = <768>;
+                hback-porch = <42>;
+                hfront-porch = <36>;
+                vback-porch = <10>;
+                vfront-porch = <4>;
+                hsync-len = <48>;
+                vsync-len = <6>;
+            };
+            //index 4
+            FHD2: ldb-1920x1080 {
+                clock-frequency = <130000000>;
+                hactive = <1920>;
+                vactive = <1080>;
+                hback-porch = <100>;
+                hfront-porch = <40>;
+                vback-porch = <30>;
+                vfront-porch = <3>;
+                hsync-len = <10>;
+                vsync-len = <2>;
+            };
+            //G190SF01, index 5
+            WSXGAP2: ldb-1680x1050 {
+                clock-frequency = <130000000>;
+                hactive = <1680>;
+                vactive = <1050>;
+                hback-porch = <250>;
+                hfront-porch = <250>;
+                vback-porch = <10>;
+                vfront-porch = <4>;
+                hsync-len = <76>;
+                vsync-len = <2>;
+            };
+        };
+    };
+};
